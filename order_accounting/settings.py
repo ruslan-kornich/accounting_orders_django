@@ -1,3 +1,5 @@
+import json
+
 import environ
 import os
 from pathlib import Path
@@ -34,7 +36,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'order.apps.OrderConfig'
+    'rest_framework',
+    'order.apps.OrderConfig',
 ]
 
 MIDDLEWARE = [
@@ -119,3 +122,5 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+SERVICE_ACCOUNT = json.load(open(env('SERVICE_ACCOUNT_GOOGLE_SHEETS')))

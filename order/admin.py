@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from order.models import Order, DollarRate
+from order.models import Order, ExchangeRate
 
 admin.site.register(Order)
-admin.site.register(DollarRate)
+admin.site.register(ExchangeRate)
